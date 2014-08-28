@@ -220,6 +220,11 @@ $('#startDate').live('click', function () {
             dateFormat: 'mm-dd-yy',
             onSelect: function(dateText, inst){
                 $('#calDepartureDateField, #calArrivalDateFieldMobile').datepicker("option","minDate",dateText); 
+                var date = $(this).datepicker('getDate');
+                if (date){
+                      date.setDate(date.getDate() + 1);
+                      $( "#calDepartureDateField, #calDepartureDateFieldMobile" ).datepicker( "option", "minDate", date );
+                }
             }
         }).datepicker("setDate","today");
         
@@ -389,9 +394,21 @@ $(window).ready(function(){
 	
 	/*The Ocean Suites page*/
 	prependItem('.custom-body-right-copy', '.the-ocean-suites-copy');
+
+        /*The Ocean Suites- Experience manager fix for pretty photos*/
+        prependItem('#collapseRoomsOne .panel-left-rooms', '.one-bedroom-suites-gallery .gallery');
+	prependItem('#collapseRoomsTwo .panel-left-rooms', '.two-bedroom-suites-gallery .gallery');
+	prependItem('#collapseRoomsThree .panel-left-rooms', '.entertainment-suites-gallery .gallery');
+	prependItem('#collapseRoomsFour .panel-left-rooms', '.the-grand-suite-gallery .gallery');
+	prependItem('#collapseRoomsFive .panel-left-rooms', '.the-penthouse-suite-gallery .gallery');
 	
 	/*Art Deco Suites page*/
 	prependItem('.custom-body-right-copy', '.art-deco-suites-copy');
+          /*Experience manager - pretty photo setup*/
+          prependItem('#collapseRoomsOne .panel-left-rooms', '.studio-suites-gallery .gallery');
+          prependItem('#collapseRoomsTwo .panel-left-rooms', '.junior-suites-gallery .gallery');
+          prependItem('#collapseRoomsThree .panel-left-rooms', '.art-deco-one-bedroom-suites-gallery .gallery');
+          prependItem('#collapseRoomsFour .panel-left-rooms', '.bi-level-suites-gallery .gallery');
 	
 	/*Exclusive Offers Intro txt*/
 	prependItem('.custom-body-right-copy', '.exclusive-offers-copy');
@@ -399,11 +416,19 @@ $(window).ready(function(){
 	/*Exclusive Offers Intro txt*/
 	prependItem('.custom-body-right-copy', '.discover-miami-copy');
         
+
+        /*Culinary Experiences - experience manager pretty photo fix*/
+       prependItem('#collapseRoomsOne .panel-left-rooms', '.the-restaurant-gallery .gallery');
+       prependItem('#collapseRoomsTwo .panel-left-rooms', '.the-setai-grill-gallery .gallery');
+       prependItem('#collapseRoomsThree .panel-left-rooms', '.the-bar-and-courtyard-gallery .gallery');
+       prependItem('#collapseRoomsFour .panel-left-rooms', '.the-pool-and-beach-bar-gallery .gallery');
+
     /*Appends an item to a specified div*/
 	function appendItem(destination, item){
    		$(destination).append($(item));
 	}
-	
+	/*Inserts View Gallery image on first li of each prettyphoto gallery*/
+		appendItem('ul.gallery li:first-child a','.hover-search-icon');
 	/*Adds ritual page content from experience manager*/
 		appendItem('.custom-widget-expanding-rooms-room-1', '#collapseRoomsOne');
         appendItem('.custom-widget-expanding-rooms-room-2', '#collapseRoomsTwo');
