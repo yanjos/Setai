@@ -374,13 +374,6 @@ $(window).ready(function(){
 	addItem('.room-9', '#collapseRoomsNine .panel-left-rooms');
 	addItem('.room-10', '#collapseRoomsTen .panel-left-rooms');
 	addItem('.room-11', '#collapseRoomsEleven .panel-left-rooms');
-	
- /*Adds content from experience manager to Culinary Experiences page*/
-    addItem('.menu-list-1', '#collapseRoomsOne .miniGallery');
-    addItem('.menu-list-2', '#collapseRoomsTwo .miniGallery');
-    addItem('.menu-list-3', '#collapseRoomsThree .miniGallery');
-    addItem('.menu-list-4', '#collapseRoomsFour .miniGallery');	
-
 
 	/*Prepends an item to a specified div*/
 	function prependItem(destination, item){
@@ -439,7 +432,13 @@ $(window).ready(function(){
         appendItem('.custom-widget-expanding-rooms-room-7', '#collapseRoomsSeven');
 	    appendItem('.custom-body-right-copy', '.rituals-copy');
 
-	
+		
+	 /*Adds content from experience manager to Culinary Experiences page*/
+		appendItem('#collapseRoomsOne .panel-left-rooms','.menu-list-1');
+		appendItem('#collapseRoomsTwo .panel-left-rooms','.menu-list-2');
+		appendItem('#collapseRoomsThree .panel-left-rooms', '.menu-list-3');
+		appendItem('#collapseRoomsFour .panel-left-rooms','.menu-list-4');	
+
 	/*fixes source URL from another server to remove MCP generated code in URL*/
 
 	$('img[src*="dev.tigglobal.com"]').each(function() {
