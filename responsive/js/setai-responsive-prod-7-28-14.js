@@ -439,6 +439,9 @@ $(window).ready(function(){
 		appendItem('#collapseRoomsThree .panel-left-rooms', '.menu-list-3');
 		appendItem('#collapseRoomsFour .panel-left-rooms','.menu-list-4');	
 
+	 /*Adds content from experience manager to Contact us page*/
+		appendItem('.custom-body-right-copy','.contact-us-copy');
+	
 	/*fixes source URL from another server to remove MCP generated code in URL*/
 
 	$('img[src*="dev.tigglobal.com"]').each(function() {
