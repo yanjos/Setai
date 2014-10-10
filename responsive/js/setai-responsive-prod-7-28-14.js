@@ -139,6 +139,7 @@ $(".group5").colorbox({rel:'group1', transition:"none", width:"100%", maxWidth:"
 $(".group6").colorbox({rel:'group1', transition:"none", width:"100%", maxWidth:"600px"});
 $(".group7").colorbox({rel:'group1', transition:"none", width:"100%", maxWidth:"600px"});
 $(".group8").colorbox({rel:'group1', transition:"none", width:"100%", maxWidth:"600px"});
+$(".group9").colorbox({rel:'group1', transition:"none", width:"100%", maxWidth:"600px"});
 
 
 /*ColorBox for Culinary Artistry - Open Table Popup START*/
