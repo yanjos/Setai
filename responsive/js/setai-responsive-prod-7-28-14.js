@@ -35,6 +35,14 @@ $('a[href*="&url_="]').each(function() {
   $(this).attr('href',cleanFinalURL)
 });
 
+//Fixes All experience manager links by removing everything after & YPA 10-10-14
+$('a[href*="&"]').each(function() {
+  var dirtyURL = $(this).attr('href');
+  var dirtyURLCleaner= dirtyURL.split('&')[0];
+  var cleanFinalURL = decodeURIComponent(dirtyURLCleaner);
+  $(this).attr('href',cleanFinalURL)
+});
+	
 /*Cleans Prettyphoto plugin from experience manager*/
 $('a[href*="?notfound=notavailable&vw="]').each(function() {
   var dirtyURL = $(this).attr('href');
