@@ -423,7 +423,7 @@ $(window).ready(function(){
 	}
 	/*Inserts View Gallery image on first li of each prettyphoto gallery*/
 		appendItem('ul.gallery li:first-child a','.hover-search-icon');
-	/*Adds ritual page content from experience manager*/
+	/*Adds ritual page and exclusive offers page content from experience manager*/
 		appendItem('.custom-widget-expanding-rooms-room-1', '#collapseRoomsOne');
         appendItem('.custom-widget-expanding-rooms-room-2', '#collapseRoomsTwo');
         appendItem('.custom-widget-expanding-rooms-room-3', '#collapseRoomsThree');
@@ -431,6 +431,8 @@ $(window).ready(function(){
         appendItem('.custom-widget-expanding-rooms-room-5', '#collapseRoomsFive');
         appendItem('.custom-widget-expanding-rooms-room-6', '#collapseRoomsSix');
         appendItem('.custom-widget-expanding-rooms-room-7', '#collapseRoomsSeven');
+		appendItem('.custom-widget-expanding-rooms-room-8', '#collapseRoomsEight');
+		appendItem('.custom-widget-expanding-rooms-room-9', '#collapseRoomsNine');
 	    appendItem('.custom-body-right-copy', '.rituals-copy');
 
 		
