@@ -879,7 +879,7 @@ footer {
     color:#fff;
     width:100%;
     background-color:rgba(0, 0, 0, 0.4);
-    padding:15px 77px 15px 50px;
+    padding:15px;
     border-top:1px solid rgba(255, 255, 255, 0.2);
     font-family:"itc_avant_garde_gothicbook", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
@@ -887,14 +887,14 @@ footer {
     display:inline-block;
 }
 #footer-right {
-    width:26%;
+    width:20%;
     white-space:nowrap;
 }
 #footer-middle {
     width:47%;
 }
 #footer-left {
-    width:26%;
+    width:32%;
 }
 #footer-middle {
     text-transform:uppercase;
@@ -917,7 +917,7 @@ ul.gallery li:first-child {
     width:100%;
 }
 .photos-videos ul.gallery li:first-child {
-    width:18%;
+    width:45%;
 }
 .hover-search-icon {
     width:141px;
