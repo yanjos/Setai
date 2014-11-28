@@ -1,6 +1,12 @@
 <script src="//images.webhotel.microsdc.us/setai/js/plugins/setai-custom-js-files.min.js"></script><script>
 /*LATEST JS*/
 $(document).ready(function(){
+//Takes Navis code and puts it into mobile header and desktop header with tel: linking
+    var x = $('.c-nav-txt-num').clone(true).find('script').remove().end().html();
+    var y = x.replace(/[" "()-]/g, '');
+    $('<span class="c-nav-txt-num-show">RESERVATIONS: <a href="tel:'+ y +'">' + x + '</a></span>').insertAfter('.c-nav-txt-num');
+    $('.header-mobile-right').append($('<a href="tel:' + y + '"><i class="fa fa-phone">&nbsp;</i></a>'));
+
 	//Removes MCP generated CSS code to fix video and google maps iphone issue
 	$('style#csstpl').remove();
 	
@@ -151,7 +157,7 @@ $(".group9").colorbox({rel:'group1', transition:"none", width:"100%", maxWidth:"
 
 
 /*ColorBox for Culinary Artistry - Open Table Popup START*/
-$(".reserve-table-btn.desktopModalLink").colorbox({inline:true, width: "625px", height: "380px", scrolling: false, onLoad: function(){ $("#colorbox").addClass("openTableColorBox");} });
+$(".reserve-table-btn.desktopModalLink, .reserve-table-btn-link.desktopModalLink").colorbox({inline:true, width: "625px", height: "380px", scrolling: false, onLoad: function(){ $("#colorbox").addClass("openTableColorBox");} });
 
 /*Custom by OS - needed for expanding/collapsing height of colorbox based on if the date picker for open table embed is visible or not*/
 $('#startDate').live('click', function () {
